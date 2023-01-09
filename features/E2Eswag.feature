@@ -11,4 +11,9 @@ Feature: Navigation and Assertion
     And go to the cart
     And remove product with name "Sauce Labs Bike Light"
     And go to continue shopping
-    And Log out page
+    And select a product with name "Sauce Labs Backpack"
+    And add to the cart from inventory item page
+    And go to the cart
+    And go to checkout page
+    And fill checkout form with name "Juan" Last name "Ochoa" postal code "051050" and press continue button
+    #And Log out page
