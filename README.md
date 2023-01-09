@@ -19,7 +19,7 @@
 
 2. Run cucumber feature file which has the test scenarios
 
-    - Running `E2Eswag.feature` 
+    - Running `npm test features/E2Eswag.feature` 
 
 
 
