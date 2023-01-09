@@ -1,7 +1,7 @@
 
 Feature: Navigation and Assertion
 
-  Scenario: Visit Simple Site website
+  Scenario: Visit Swag website
 
     Given I open swag website
     Then login page with user name "<userName>" and password "<password>"
