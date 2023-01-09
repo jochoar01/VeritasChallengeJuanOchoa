@@ -15,6 +15,10 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'chrome',
         chromeOptions: {
+          prefs : {
+            "credentials_enable_service" : false,
+            "profile.password_manager_enabled" : false
+          },
           excludeSwitches: ["enable-automation"],
           args: [
             

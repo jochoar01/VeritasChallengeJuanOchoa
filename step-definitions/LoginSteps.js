@@ -4,7 +4,7 @@ var page = client.page.LoginPage();
 var home = client.page.HomePage();
 
 Given('I open swag website', () =>{
-    console.log("GIVEN TAG")
+   
     return page.navigate().waitForElementVisible('body').assert.elementPresent('body');
 });
 
@@ -17,6 +17,9 @@ When("login page", ()=>{
 
 Then("the element exists {string}", (text)=>{
     return home.waitForElementVisible("@header").assert.elementPresent('@header')
-    .assert.containsText('@header',text);
+    .assert.containsText('@header',text)
 });
 
+ Then('Log out page', function () {
+    return home.waitForElementVisible("@menu").click("@menu").click("@logOut")
+});

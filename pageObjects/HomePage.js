@@ -1,7 +1,13 @@
 module.exports = {
-    url: 'https://www.saucedemo.com/inventory.html',
+    
     elements: {
       header: "span[class=title]",
+      menu:"#react-burger-menu-btn",
+      logOut:"#react-burger-menu-btn",
+      producto:{        
+        selector:"//div[text()='Sauce Labs Backpack']",
+        locateStrategy:'xpath'},
+        cart:"#shopping_cart_container"
         
 
     }
