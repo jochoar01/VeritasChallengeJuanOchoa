@@ -9,5 +9,5 @@ Then('Log out page', function () {
 Then('select a product with name {string}', function (product) {
     let productSelector= `//div[text()='${product}']`;
     return client.useXpath().waitForElementVisible(productSelector)
-    .click(productSelector).pause(2000);     
+    .click(productSelector);     
   });

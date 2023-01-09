@@ -20,8 +20,7 @@ module.exports = {
             "profile.password_manager_enabled" : false
           },
           excludeSwitches: ["enable-automation"],
-          args: [
-            
+          args: [          
             "window-size=1920,1080",
             "disable-gpu",
             "start-maximized",

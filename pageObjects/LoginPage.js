@@ -3,10 +3,6 @@ module.exports = {
     elements: {
       userName: "#user-name",
       password: "#password",
-      loginButton: "#login-button",   
-
-    }
-    
-    //locateStrategy: async function (selector) { return await selector.startsWith('/') ? 'xpath' : 'css selector'; }
-    
+      loginButton: "#login-button"
+    }    
 }

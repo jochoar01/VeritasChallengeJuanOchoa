@@ -3,23 +3,17 @@ const {Given, When, Then} = require('@cucumber/cucumber');
 var page = client.page.LoginPage();
 var home = client.page.HomePage();
 
-Given('I open swag website', () =>{
-   
-    return page.navigate().waitForElementVisible('body').assert.elementPresent('body').pause(2000);
+Given('I open swag website', () =>{   
+    return page.navigate();
 });
 
-
-
-When("login page", ()=>{
-    return page.waitForElementVisible("@userName").setValue("@userName","standard_user")
-    .setValue("@password","secret_sauce").click("@loginButton").pause(2000)
+When('login page with user name {string} and password {string}', function (user, pwd) {
+    return page.waitForElementVisible("@userName").setValue("@userName",user)
+    .setValue("@password",pwd).click("@loginButton")
 });
 
-Then("the element exists {string}", (text)=>{
+Then("validate the element exists {string}", (text)=>{
     return home.waitForElementVisible("@header").assert.elementPresent('@header')
-    .assert.containsText('@header',text).pause(2000)
+    .assert.containsText('@header',text)
 });
 
- Then('Log out page', function () {
-    return home.waitForElementVisible("@menu").click("@menu").click("@logOut").pause(2000)
-});
