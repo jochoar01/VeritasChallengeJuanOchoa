@@ -9,6 +9,8 @@ var cart = client.page.CartPage();
   Then('remove product with name {string}', function (product){
 
     let productSelector= `//button[@id='remove-${product.toLowerCase().replaceAll(' ', '-')}']`;         
-    return client.useXpath().waitForElementVisible(productSelector).click(productSelector);
+    return client.useXpath().waitForElementVisible(productSelector)
+    .assert.elementPresent(productSelector) 
+    .click(productSelector);
   });
 

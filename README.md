@@ -18,9 +18,9 @@
         ```
 
 2. Run cucumber feature file which has the test scenarios
-
+   ```shell
     - Running `npm test features/E2Eswag.feature` 
-
+   ```
 
 
 

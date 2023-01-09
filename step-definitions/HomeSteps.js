@@ -8,6 +8,8 @@ Then('Log out page', function () {
 
 Then('select a product with name {string}', function (product) {
     let productSelector= `//div[text()='${product}']`;
-    return client.useXpath().waitForElementVisible(productSelector)
+    return client.useXpath()
+    .waitForElementVisible(productSelector)
+    .assert.elementPresent(productSelector)
     .click(productSelector);     
   });
